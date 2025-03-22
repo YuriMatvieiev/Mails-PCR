@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      table {
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      td {
+        border-collapse: collapse;
+      }
+
+      .borders {
+        display: none;
+      }
+
+      @media screen {
+        table {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        td {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        a {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        span {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        .heading-one span,
+        .heading-two {
+          font-family: "Castoro", Arial, serif !important;
+          font-weight: 400 !important;
+          font-style: italic !important;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .do-show {
+          display: block !important;
+        }
+
+        .mail {
+          font-size: 16px;
+          line-height: 25px;
+          width: 100% !important;
+        }
+        .two-cols {
+          width: 50% !important;
+        }
+
+        table {
+          border-collapse: separate !important;
+        }
+
+        table td {
+          /*display: inline-block !important;*/
+          border-collapse: separate !important;
+        }
+
+        .spacer {
+          border-spacing: 10px !important;
+        }
+
+        .large-screens-spacer {
+          display: none;
+        }
+
+        td.spacer-cell {
+          width: 20px !important;
+        }
+
+        .logo {
+          width: 200px;
+        }
+        .footer-logo {
+          width: 100% !important;
+        }
+
+        .body-text {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .heading-one {
+          font-size: 18px !important;
+          line-height: 24px !important;
+        }
+
+        .heading-two {
+          font-size: 18px !important;
+          line-height: 24px !important;
+          font-family: "Castoro", Arial, serif !important;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        .heading-three {
+          font-size: 16px !important;
+          line-height: 21px !important;
+        }
+
+        .orange-button {
+          font-size: 14px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          padding-top: 5px !important;
+          padding-bottom: 5px !important;
+          display: block;
+        }
+
+        .mobile-gone {
+          display: none !important;
+        }
+
+        .black-title-one {
+          text-align: center !important;
+          font-size: 18px !important;
+          line-height: 28px !important;
+          padding: 10px 0 0 0;
+          width: 100% !important;
+          display: inline-block;
+        }
+
+        .black-title-two {
+          text-align: center !important;
+          padding: 0 0 10px 0;
+          width: 100% !important;
+          display: inline-block;
+        }
+
+        .black-box-general {
+          text-align: left !important;
+          padding: 10px;
+          font-size: 14px !important;
+          line-height: 20px !important;
+        }
+
+        .grey-box-general {
+          text-align: left !important;
+          padding: 20px;
+        }
+
+        .image-responsive {
+          display: inline-block !important;
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        .footer {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .footer-buttons {
+          width: 80%;
+        }
+
+        .footer-buttons td {
+          width: 100% !important;
+          display: block;
+        }
+
+        .footer-buttons td a {
+          width: 100% !important;
+          display: block;
+          padding: 5px 0 !important;
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .social-icon {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .footer-links a {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100% !important;
+          display: block !important;
+        }
+
+        .cart-item td {
+          width: 100% !important;
+        }
+
+        .cart-item td.cart-item-photo {
+          width: 30% !important;
+          flex-grow: 2;
+        }
+
+        .cart-item td.cart-item-description {
+          width: 60% !important;
+          vertical-align: top;
+        }
+
+        .cart-item td.cart-item-description table tr td img {
+          margin-bottom: 5px;
+        }
+
+        .cart-item td.cart-item-description table tr td {
+          width: 100% !important;
+          padding-bottom: 5px;
+        }
+
+        .cart-total td {
+          padding: 20px;
+          font-size: 14px !important;
+          line-height: 16px;
+        }
+
+        .cart-total td table td {
+          padding: 4px;
+        }
+
+        .cart-spacer {
+          height: 0 !important;
+          line-height: 0 !important;
+        }
+
+        .your-data {
+          padding-left: 40px;
+        }
+
+        .your-data td {
+          font-size: 14px;
+          line-height: 18px;
+          display: inline-block !important;
+          width: 100% !important;
+        }
+
+        .your-data td:first-of-type {
+          padding-bottom: 20px;
+        }
+
+        .statusbar-container {
+          width: 265px !important;
+        }
+
+        .statusbar {
+          width: 100% !important;
+        }
+
+        .statusbar table {
+          width: 100% !important;
+        }
+
+        .statusbar {
+          display: inline-block !important;
+          width: 100% !important;
+        }
+
+        .statusbar-cell {
+          vertical-align: middle !important;
+          text-align: left;
+        }
+
+        .statusbar-cell span:first-of-type {
+        }
+
+        .status-step {
+          display: inline-block;
+          margin-top: 5px;
+          width: 215px;
+          text-align: left !important;
+        }
+
+        .status-number {
+          width: 45px;
+          display: inline-block;
+        }
+
+        tr.borders {
+          display: block !important;
+        }
+
+        tr.borders td:first-of-type {
+          width: 100%;
+        }
+
+        tr.borders table {
+          width: 100% !important;
+          line-height: 0 !important;
+        }
+
+        .articles td {
+          display: inline-block !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+
+    <!--[if mso]>
+      <style type="text/css">
+        .fallback-text {
+          font-family: Arial, sans-serif !important;
+        }
+
+        table td,
+        .mail,
+        .mailfooter {
+          font-family: Arial, sans-serif !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body bgcolor="#FFFFFF" cellpadding="0" style="margin: 0" cellspacing="0">
+    <table width="100%" align="center" class="mail">
+      <tr>
+        <td style="text-align: center" align="center">
+          <!-- logo section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="16"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center">
+                <!-- <img src="images/logo.png" class="logo" width="400" /> -->
+                <img src="images/logo.png" class="logo" width="400" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="30"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end logo section -->
+
+          <!-- title section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td
+                class="heading-one"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-weight: 800;
+                  font-style: normal;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-size: 40px;
+                  line-height: 50px;
+                  color: #31303e;
+                "
+              >
+                <span
+                  style="
+                    font-family: Arial, sans-serif;
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                  >Merci pour</span
+                >
+                <br />
+                votre commande
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="20"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end title section -->
+
+          <!-- first text section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table width="100%">
+                  <tr>
+                    <td
+                      class="body-text"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-weight: 200;
+                        font-style: normal;
+                        text-align: left;
+                        font-size: 17px;
+                        line-height: 22px;
+                        color: #31303e;
+                      "
+                    >
+                      Bonjour Anne, <br /><br />
+                      Merci d’avoir passé votre commande chez PointCarré.
+                      <br /><br />
+                      Dès que votre colis sera expédié, vous recevrez un lien
+                      afin de pouvoir le suivre à tout moment. Vous trouverez
+                      ci-dessous les détails de votre commande.
+                      <br /><br />
+                      A bientôt,<br />
+                      L’équipe PointCarré
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="15"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end first text section -->
+
+          <!-- black box -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td style="background: #31303e">
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table width="100%">
+                  <tr>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="7"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 300;
+                        font-style: normal;
+                        text-align: left;
+                        font-size: 20px;
+                        line-height: 30px;
+                      "
+                    >
+                      Numéro de commande: <strong>#200400642</strong> <br />
+                      Mode de paiement: <strong>Bancontact</strong> <br />
+                      Mode de livraison choisi:
+                      <strong>Livraison à domicile</strong> <br />
+                      Livraison prévue: <strong>Lundi 10 mars 2025</strong>
+                    </td>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="10"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end black box -->
+
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="20"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+
+          <!-- title section -->
+          <table
+            width="550"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td
+                class="heading-two"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-weight: 800;
+                  font-style: normal;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-size: 30px;
+                  line-height: 35px;
+                "
+              >
+                Status de votre commande
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="20"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end title section -->
+
+          <!-- status bar -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td style="text-align: center">
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  class="mail statusbar-container"
+                  style="margin: 0 auto"
+                >
+                  <tr>
+                    <td
+                      style="vertical-align: top; width: 100px"
+                      class="statusbar"
+                    >
+                      <table cellpadding="0" cellspacing="0" style="">
+                        <tr>
+                          <td class="statusbar-cell" style="text-align: center">
+                            <span
+                              class="status-number"
+                              style="
+                                color: #31303e;
+                                font-family: Arial, sans-serif;
+                                font-weight: 800;
+                                font-style: normal;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: 30px;
+                                line-height: 35px;
+                              "
+                              >1</span
+                            >
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <tr>
+                                <td style="font-size: 0; line-height: 0">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <div
+                              class="status-step"
+                              style="
+                                vertical-align: top;
+                                color: #000000;
+                                text-align: center;
+                              "
+                              class="status-step active"
+                            >
+                              Commande validée
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="borders">
+                          <td>
+                            <!--[if !mso]>-->
+                            <div
+                              style="display: none; mso-hide: all"
+                              class="do-show"
+                            >
+                              <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="width: 45px; text-align: center">
+                                    <img
+                                      src="images/grey-line.png"
+                                      width="1"
+                                      height="30"
+                                      style="display: inline-block"
+                                    />
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!--<![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="mobile-gone" style="vertical-align: top">
+                      <img
+                        src="images/grey-line-wide.png"
+                        width="80"
+                        height="20"
+                        style="display: block"
+                      />
+                    </td>
+                    <td
+                      style="vertical-align: top; width: 100px"
+                      class="statusbar"
+                    >
+                      <table cellpadding="0" cellspacing="0" style="">
+                        <tr>
+                          <td class="statusbar-cell" style="text-align: center">
+                            <span
+                              class="status-number"
+                              style="
+                                color: #e7dbca;
+                                font-family: Arial, sans-serif;
+                                font-weight: 800;
+                                font-style: normal;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: 30px;
+                                line-height: 35px;
+                              "
+                              >2</span
+                            >
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <tr>
+                                <td style="font-size: 0; line-height: 0">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <span
+                              class="status-step"
+                              style="
+                                vertical-align: top;
+                                color: #e7dbca;
+                                text-align: center;
+                              "
+                              class="status-step active"
+                              >Commande en préparation</span
+                            >
+                          </td>
+                        </tr>
+                        <tr class="borders">
+                          <td>
+                            <!--[if !mso]>-->
+                            <div
+                              style="display: none; mso-hide: all"
+                              class="do-show"
+                            >
+                              <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="width: 45px; text-align: center">
+                                    <img
+                                      src="images/grey-line.png"
+                                      width="1"
+                                      height="30"
+                                      style="display: inline-block"
+                                    />
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!--<![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="mobile-gone" style="vertical-align: top">
+                      <img
+                        src="images/grey-line-wide.png"
+                        width="80"
+                        height="20"
+                        style="display: block"
+                      />
+                    </td>
+                    <td
+                      style="vertical-align: top; width: 100px"
+                      class="statusbar"
+                    >
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        class="mail"
+                        style=""
+                      >
+                        <tr>
+                          <td class="statusbar-cell" style="text-align: center">
+                            <span
+                              class="status-number"
+                              style="
+                                width: 45px;
+                                display: inline-block;
+                                color: #e7dbca;
+                                font-family: Arial, sans-serif;
+                                font-weight: 800;
+                                font-style: normal;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: 30px;
+                                line-height: 35px;
+                              "
+                              >3</span
+                            >
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <tr>
+                                <td style="font-size: 0; line-height: 0">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <span
+                              class="status-step"
+                              style="
+                                vertical-align: top;
+                                color: #e7dbca;
+                                text-align: center;
+                                font-size: 14px;
+                              "
+                              class="status-step active"
+                              >Commande expédiée</span
+                            >
+                          </td>
+                        </tr>
+                        <tr class="borders">
+                          <td>
+                            <!--[if !mso]>-->
+                            <div
+                              style="display: none; mso-hide: all"
+                              class="do-show"
+                            >
+                              <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td style="width: 45px; text-align: center">
+                                    <img
+                                      src="images/grey-line.png"
+                                      width="1"
+                                      height="30"
+                                      style="display: inline-block"
+                                    />
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!--<![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="mobile-gone" style="vertical-align: top">
+                      <img
+                        src="images/grey-line-wide.png"
+                        width="80"
+                        height="20"
+                        style="display: block"
+                      />
+                    </td>
+                    <td
+                      style="vertical-align: top; width: 100px"
+                      class="statusbar"
+                    >
+                      <table cellpadding="0" cellspacing="0" style="">
+                        <tr>
+                          <td class="statusbar-cell" style="text-align: center">
+                            <span
+                              class="status-number"
+                              style="
+                                color: #e7dbca;
+                                font-family: Arial, sans-serif;
+                                font-weight: 800;
+                                font-style: normal;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: 30px;
+                                line-height: 35px;
+                              "
+                              >4</span
+                            >
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <tr>
+                                <td style="font-size: 0; line-height: 0">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <span
+                              class="status-step"
+                              style="
+                                vertical-align: top;
+                                color: #e7dbca;
+                                text-align: center;
+                              "
+                              class="status-step active"
+                              >Commande livrée</span
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end status bar -->
+
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="46"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+
+          <!-- start articles table -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="
+              margin: 0 auto;
+              border-bottom: 1px solid #e7dbca;
+              text-align: left;
+              font-size: 15px;
+            "
+            class="mail"
+          >
+            <tr>
+              <td style="width: 170px">&nbsp;</td>
+              <td style="width: 220px">Article</td>
+              <td style="width: 125px">Quantité</td>
+              <td style="width: 100px">Taille</td>
+              <td style="width: 105px">Montant</td>
+            </tr>
+            <td style="width: 35px" class="mobile-gone">
+              <table cellspacing="0" cellpadding="0" class="spacer">
+                <td style="font-size: 0; line-height: 0">&nbsp;</td>
+              </table>
+              <table
+                cellspacing="0"
+                cellpadding="5"
+                class="large-screens-spacer"
+              >
+                <td style="font-size: 0; line-height: 0">&nbsp;</td>
+              </table>
+            </td>
+          </table>
+
+          <!-- end articles table -->
+
+          <!-- article -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 25px auto 0"
+            class="mail"
+          >
+            <tr>
+              <td style="text-align: center">
+                <table
+                  class="cart-item mail"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="700"
+                  style="margin: 0 auto"
+                >
+                  <tr>
+                    <td class="cart-item-photo">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        class="mail"
+                      >
+                        <tr>
+                          <td style="width: 150px">
+                            <img
+                              src="images/model-1.png"
+                              style="display: block; width: 100%"
+                            />
+                          </td>
+                          <td style="width: 30px" class="mobile-gone">
+                            <table
+                              cellspacing="0"
+                              cellpadding="0"
+                              class="spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="cart-item-description">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        class="mail articles"
+                      >
+                        <tr>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 220px;
+                              text-align: left;
+                              font-size: 19px;
+                              line-height: 29px;
+                            "
+                          >
+                            <img
+                              src="images/veromoda-logo.png"
+                              style="display: block; height: 15px"
+                            />
+                            <table
+                              cellspacing="0"
+                              cellpadding="3"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                            Pull - Rose
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 125px;
+                              color: #31303e;
+                              font-size: 14px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            1
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 100px;
+                              color: #31303e;
+                              font-size: 18px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            M
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 105px;
+                              color: #31303e;
+                              font-size: 18px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            22,99 &euro;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end article -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="4"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- article -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto 0"
+            class="mail"
+          >
+            <tr>
+              <td style="text-align: center">
+                <table
+                  class="cart-item mail"
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="700"
+                  style="margin: 0 auto"
+                >
+                  <tr>
+                    <td class="cart-item-photo">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        class="mail"
+                      >
+                        <tr>
+                          <td style="width: 150px">
+                            <img
+                              src="images/model-2.png"
+                              style="display: block; width: 100%"
+                            />
+                          </td>
+                          <td style="width: 30px" class="mobile-gone">
+                            <table
+                              cellspacing="0"
+                              cellpadding="0"
+                              class="spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                            <table
+                              cellspacing="0"
+                              cellpadding="10"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="cart-item-description">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        class="mail articles"
+                      >
+                        <tr>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 220px;
+                              text-align: left;
+                              font-size: 19px;
+                              line-height: 29px;
+                            "
+                          >
+                            <img
+                              src="images/mango-logo.png"
+                              style="display: block; height: 22px"
+                            />
+                            <table
+                              cellspacing="0"
+                              cellpadding="3"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                            Veste - Beige
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 125px;
+                              color: #31303e;
+                              font-size: 14px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            1
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 100px;
+                              color: #31303e;
+                              font-size: 18px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            M
+                          </td>
+                          <td
+                            class="cart-item-description"
+                            style="
+                              width: 105px;
+                              color: #31303e;
+                              font-size: 18px;
+                              line-height: 16px;
+                              text-align: left;
+                            "
+                          >
+                            59,99 &euro;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end article -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="14"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- cart total -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td style="border: 1px solid #e7dbca; text-align: center">
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table width="100%" class="cart-total" style="margin: 0 auto">
+                  <tr>
+                    <td style="text-align: center">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="90%"
+                        class="mail"
+                        style="
+                          margin: 0 auto;
+                          font-size: 19px;
+                          line-height: 24px;
+                        "
+                      >
+                        <tr>
+                          <td style="text-align: left">
+                            Total articles :
+                            <table
+                              cellspacing="0"
+                              cellpadding="1"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                          </td>
+                          <td style="text-align: right; vertical-align: top">
+                            90,99&euro;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left">
+                            Frais de livraison:
+                            <table
+                              cellspacing="0"
+                              cellpadding="0"
+                              class="large-screens-spacer"
+                            >
+                              <td style="font-size: 0; line-height: 0">
+                                &nbsp;
+                              </td>
+                            </table>
+                          </td>
+                          <td style="text-align: right; vertical-align: top">
+                            0,00&euro;
+                          </td>
+                        </tr>
+
+                        <tr style="font-size: 17px">
+                          <td style="text-align: left; font-weight: 700">
+                            Montant total:
+                          </td>
+                          <td
+                            style="
+                              text-align: right;
+                              vertical-align: top;
+                              font-weight: 700;
+                            "
+                          >
+                            90,99&euro;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end cart total -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="20"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- black box -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td style="background: #31303e">
+                <table
+                  cellspacing="0"
+                  cellpadding="8"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table width="100%">
+                  <tr>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="7"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 600;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 30px;
+                      "
+                    >
+                      VOS INFORMATIONS:
+                    </td>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="10"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="9"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end black box -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="16"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- your data -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto; background: #e7dbca"
+            class="mail"
+          >
+            <tr>
+              <td style="text-align: center">
+                <table
+                  cellspacing="0"
+                  cellpadding="14"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="margin: 0 auto"
+                  width="90%"
+                  class="mail your-data"
+                >
+                  <tr>
+                    <td
+                      style="
+                        text-align: left;
+                        line-height: 25px;
+                        font-size: 20px;
+                      "
+                    >
+                      <strong style="font-size: 17px"
+                        >ADRESSE DE FACTURATION:</strong
+                      >
+                      <br />
+                      <br />
+                      ANNE GREGOIRE <br />
+                      Boulevard de Merchtem, 60<br />
+                      Namur, 5000<br />
+                      Belgique <br />
+                      T. +32495145140
+                    </td>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="20"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        text-align: left;
+                        line-height: 25px;
+                        font-size: 20px;
+                      "
+                    >
+                      <strong style="font-size: 17px"
+                        >ADRESSE DE LIVRAISON:</strong
+                      >
+                      <br />
+                      <br />
+                      ANNE GREGOIRE <br />
+                      Boulevard de Merchtem, 60<br />
+                      Namur, 5000<br />
+                      Belgique <br />
+                      T. +32495145140
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end your data -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- black box -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td style="background: #31303e">
+                <table
+                  cellspacing="0"
+                  cellpadding="6"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table width="100%">
+                  <tr>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="12"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 35%;
+                      "
+                    >
+                      BESOIN D’AIDE?
+                    </td>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="4"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 400;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 16px;
+                        line-height: 18px;
+                      "
+                    >
+                      Nous vous aiderons avec plaisir !
+                      <br />
+                      <strong>N’hésitez pas à nous contacter ></strong>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="6"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end black box -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- text+img section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td
+                style="background: #b2bfd2; width: 49.5%; vertical-align: top"
+              >
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  width="90%"
+                  height="100%"
+                  style="
+                    height: 100%;
+                    border-collapse: collapse;
+                    margin: 0 auto;
+                  "
+                >
+                  <tr>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #000;
+                        font-family: Arial, sans-serif;
+                        font-weight: 700;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 36px;
+                        line-height: 44px;
+                        width: 100%;
+                      "
+                    >
+                      ACHETEZ
+                      <br />
+                      <i>5 PANTALONS</i>
+                      <br />
+                      + 1 GRATUIT
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <table width="100%" style="border-collapse: collapse">
+                        <tr>
+                          <td
+                            class="black-box-general"
+                            style="
+                              color: #000;
+                              font-family: Arial, sans-serif;
+                              font-weight: 400;
+                              font-style: italic;
+                              text-align: left;
+                              font-size: 16px;
+                              line-height: 18px;
+                            "
+                          >
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            Dans un délais de 12 mois.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="2"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+              <td class="mobile-gone">
+                <table
+                  cellspacing="0"
+                  cellpadding="4"
+                  class="large-screens-spacer"
+                ></table>
+              </td>
+              <td style="width: 49.5%">
+                <table width="100%">
+                  <td
+                    class="cart-item-photo"
+                    style="height: 100%; padding: inherit"
+                  >
+                    <table
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      class="mail"
+                    >
+                      <tr>
+                        <td style="width: 100%">
+                          <img
+                            src="images/images-text-section.png"
+                            style="display: block; width: 100%"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- text+img section -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- footer -->
+          <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto; background: #e7dbca"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table class="mail" width="700px" style="margin: 0 auto">
+                  <td class="mobile-gone">
+                    <table
+                      cellspacing="0"
+                      cellpadding="6"
+                      class="large-screens-spacer"
+                    >
+                      <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                    </table>
+                  </td>
+                  <tr>
+                    <td
+                      class="black-box-general two-cols"
+                      style="
+                        color: #000;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 75%;
+                      "
+                    >
+                      <table>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: inline-block;
+                                text-decoration: none;
+                              "
+                              href="#"
+                            >
+                              <img
+                                style="height: 50px; width: 50px"
+                                src="./images/instagram-logo.svg"
+                                alt="Image"
+                              />
+                            </a>
+                            <a
+                              style="
+                                display: inline-block;
+                                text-decoration: none;
+                              "
+                              href="#"
+                            >
+                              <img
+                                style="height: 50px; width: 50px"
+                                src="./images/facebook-logo.svg"
+                                alt="Image"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="10"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td
+                            class="black-box-general mobile-gone"
+                            style="
+                              color: #000;
+                              font-family: Arial, sans-serif;
+                              font-weight: 400;
+                              font-style: italic;
+                              text-align: left;
+                              font-size: 8px;
+                              line-height: 10px;
+                            "
+                          >
+                            Pour être sûr(e) de recevoir nos offres, nous vous
+                            conseillons d’ajouter notre email info@pointcarre.eu
+                            à votre carnet d’adresses. PointCarré S.A se réserve
+                            le droit de modifier les offres ou leur durée, au
+                            cours de la période promotionnelle. Les erreurs ou
+                            fautes évidentes dans cette newsletter sont sans
+                            engagement pour PointCarré S.A.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="4"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general two-cols"
+                      style="
+                        color: #000;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 20%;
+                      "
+                    >
+                      <table width="100%">
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              href="#"
+                            >
+                              HORAIRES</a
+                            >
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              href="#"
+                            >
+                              Service clients
+                            </a>
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              href="#"
+                            >
+                              Se désabonner
+                            </a>
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              href="#"
+                            >
+                              Vie privée
+                            </a>
+                          </td>
+                        </tr>
+
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="10"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  width="700"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="margin: 0 auto"
+                  class="mail"
+                >
+                  <tr>
+                    <td>
+                      <table cellspacing="0" cellpadding="0" class="spacer">
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                      <table
+                        cellspacing="0"
+                        cellpadding="10"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">
+                      <img
+                        src="images/logo-white.png"
+                        class="logo footer-logo"
+                        width="100%"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table cellspacing="0" cellpadding="0" class="spacer">
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                      <table
+                        cellspacing="0"
+                        cellpadding="5"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end footer -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
