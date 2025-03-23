@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hide {
+        max-height: 0px;
+        font-size: 0;
+        display: none;
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 700px) {
+        .hide {
+          max-height: none !important;
+          font-size: 12px !important;
+          display: block !important;
+        }
+      }
+    </style>
+    <style>
+      table {
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      td {
+        border-collapse: collapse;
+      }
+
+      .borders {
+        display: none;
+      }
+
+      @media screen {
+        table {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        td {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        a {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        span {
+          font-family: "DM Sans", Arial, sans-serif !important;
+        }
+
+        .heading-one span,
+        .heading-two {
+          font-family: "Castoro", Arial, serif !important;
+          font-weight: 400 !important;
+          font-style: italic !important;
+        }
+      }
+      .articles-header.articles-mobile {
+        display: none;
+      }
+
+      /* .hide {
+        display: none;
+        display: none !important;
+      } */
+      @media screen and (max-width: 700px) {
+        .do-show {
+          display: block !important;
+        }
+
+        .articles-header {
+          border-bottom: none !important;
+        }
+        .articles-header.articles-desktop {
+          display: none;
+        }
+        .articles-header.articles-mobile {
+          display: inline;
+        }
+        .mail {
+          font-size: 16px;
+          line-height: 25px;
+          width: 100% !important;
+        }
+        .two-cols {
+          width: 50% !important;
+        }
+        .blue-box {
+          margin-top: 50px !important;
+        }
+        .blue-box-text {
+          font-size: 12px !important;
+        }
+        .two-cols-mobile td {
+          display: block;
+        }
+        table {
+          border-collapse: separate !important;
+        }
+
+        table td {
+          /*display: inline-block !important;*/
+          border-collapse: separate !important;
+        }
+
+        .spacer {
+          border-spacing: 10px !important;
+        }
+
+        .large-screens-spacer {
+          display: none;
+        }
+
+        td.spacer-cell {
+          width: 20px !important;
+        }
+
+        .logo {
+          width: 200px;
+        }
+        .footer-logo {
+          width: 300px !important;
+        }
+
+        .body-text {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .heading-one {
+          font-size: 39px !important;
+          line-height: 44px !important;
+          font-weight: 700 !important;
+        }
+        .heading-one span {
+          font-size: 32px !important;
+          line-height: 36px !important;
+          font-weight: 700 !important;
+          font-style: italic !important;
+        }
+
+        .heading-two {
+          font-size: 27px !important;
+          line-height: 34px !important;
+          font-family: "Castoro", Arial, serif !important;
+          font-weight: 700;
+          font-style: italic;
+        }
+
+        .heading-three {
+          font-size: 16px !important;
+          line-height: 21px !important;
+        }
+
+        .orange-button {
+          font-size: 14px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          padding-top: 5px !important;
+          padding-bottom: 5px !important;
+          display: block;
+        }
+
+        .mobile-gone {
+          display: none !important;
+        }
+
+        .black-title-one {
+          text-align: center !important;
+          font-size: 18px !important;
+          line-height: 28px !important;
+          padding: 10px 0 0 0;
+          width: 100% !important;
+          display: inline-block;
+        }
+
+        .black-title-two {
+          text-align: center !important;
+          padding: 0 0 10px 0;
+          width: 100% !important;
+          display: inline-block;
+        }
+
+        .black-box-general {
+          text-align: left !important;
+          padding: 10px;
+          font-size: 14px !important;
+          line-height: 20px !important;
+        }
+
+        .grey-box-general {
+          text-align: left !important;
+          padding: 20px;
+        }
+
+        .image-responsive {
+          display: inline-block !important;
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        .footer {
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .footer-buttons {
+          width: 80%;
+        }
+
+        .footer-buttons td {
+          width: 100% !important;
+          display: block;
+        }
+
+        .footer-buttons td a {
+          width: 100% !important;
+          display: block;
+          padding: 5px 0 !important;
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        .social-icon {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .footer-links a {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100% !important;
+          display: block !important;
+        }
+
+        .cart-item td {
+        }
+
+        .cart-item td.cart-item-photo {
+          width: 30% !important;
+          flex-grow: 2;
+        }
+        .cart-item .cart-item-description {
+          vertical-align: middle;
+          margin-left: 20px;
+          width: 60% !important;
+        }
+
+        .cart-item td.cart-item-description {
+        }
+
+        .cart-item td.cart-item-description table tr td img {
+          margin-bottom: 5px;
+        }
+
+        .cart-item td.cart-item-description table tr td {
+          width: 100% !important;
+          padding-bottom: 5px;
+        }
+
+        .cart-total td {
+          padding: 20px;
+          font-size: 14px !important;
+          line-height: 16px;
+        }
+
+        .cart-total td table td {
+          padding: 4px;
+        }
+
+        .cart-spacer {
+          height: 0 !important;
+          line-height: 0 !important;
+        }
+
+        .your-data {
+          /* padding-left: 40px; */
+          padding: 20px;
+        }
+
+        .your-data td {
+          font-size: 14px;
+          line-height: 18px;
+          display: inline-block !important;
+          width: 100% !important;
+        }
+
+        .statusbar-container {
+          width: 340px !important;
+        }
+
+        .statusbar {
+          width: 100% !important;
+        }
+
+        .statusbar table {
+          width: 100% !important;
+        }
+
+        .statusbar {
+          display: inline-block !important;
+          width: 100% !important;
+        }
+
+        .statusbar-cell {
+          vertical-align: middle !important;
+          text-align: left !important;
+        }
+
+        .statusbar-cell span:first-of-type {
+        }
+
+        .status-step {
+          display: inline-block;
+          margin-top: 5px;
+          width: 290px;
+          text-align: left !important;
+          font-size: 23px !important;
+        }
+
+        .status-number {
+          width: 45px;
+          display: inline-block;
+        }
+
+        tr.borders {
+          display: block !important;
+        }
+
+        tr.borders td:first-of-type {
+          width: 100%;
+        }
+
+        tr.borders table {
+          width: 100% !important;
+          line-height: 0 !important;
+        }
+
+        .articles td {
+          display: inline-block !important;
+          width: 100% !important;
+        }
+        .articles {
+          width: 85% !important;
+        }
+        .bg-text {
+          font-size: 20px !important;
+          line-height: 24px !important;
+        }
+      }
+    </style>
+
+    <!--[if mso]>
+      <style type="text/css">
+        .fallback-text {
+          font-family: Arial, sans-serif !important;
+        }
+
+        table td,
+        .mail,
+        .mailfooter {
+          font-family: Arial, sans-serif !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body bgcolor="#FFFFFF" cellpadding="0" style="margin: 0" cellspacing="0">
+    <table width="100%" align="center" class="mail">
+      <tr>
+        <td style="text-align: center" align="center">
+          <!-- logo section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="16"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center">
+                <!-- <img src="images/logo.png" class="logo" width="400" /> -->
+                <img
+                  src="https://github.com/YuriMatvieiev/Mails-PCR/blob/main/images/logo.png?raw=true"
+                  class="logo"
+                  width="400"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="30"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end logo section -->
+
+          <!-- title section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td
+                class="heading-one"
+                style="
+                  font-family: Arial, sans-serif;
+                  font-weight: 800;
+                  font-style: normal;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-size: 40px;
+                  line-height: 50px;
+                  color: #31303e;
+                "
+              >
+                <span
+                  style="
+                    font-family: Arial, sans-serif;
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                  >VOICI VOTRE</span
+                >
+                <br />
+                CARTE CADEAU
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="20"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end title section -->
+
+          <!-- first text section -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table width="100%">
+                  <tr>
+                    <td
+                      class="body-text"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-weight: 200;
+                        font-style: normal;
+                        text-align: left;
+                        font-size: 17px;
+                        line-height: 22px;
+                        color: #31303e;
+                      "
+                    >
+                      Bonjour Anne, <br /><br />
+                      Vous avez commandé une carte cadeau PointCarré d’une
+                      valeur de 00,00€ pour XXX. Votre carte cadeau
+                      personnalisée se trouve en annexe et peut être imprimée en
+                      cas de besoin. <br /><br />
+                      La carte cadeau peut être utilisée dans nos magasins ainsi
+                      que sur notre e-shop. <br />
+                      <b
+                        >- En magasin, il suffit de présenter la carte en format
+                        digital ou papier à la caisse.</b
+                      >
+                      <br />
+                      <b
+                        >- En ligne, il vous suffit d’introduire le code lors de
+                        l’étape de paiement dans le champ prévu «Appliquer un
+                        bon de réduction».</b
+                      ><br /><br />
+
+                      A bientôt, <br />
+                      L’équipe PointCarré
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="15"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end first text section -->
+
+          <!-- text+img section -->
+          <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto; max-width: 700px; width: 100% !important"
+            class="mail"
+          >
+            <tr width="700" style="width: 100% !important">
+              <td
+                style="
+                  background: #c897c5;
+                  color: #fff;
+                  vertical-align: middle;
+                  text-align: center;
+                  width: 49.5%;
+                "
+              >
+                <table
+                  cellspacing="0"
+                  cellpadding="10"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  width="90%"
+                  height="100%"
+                  style="
+                    height: 100%;
+                    border-collapse: collapse;
+                    margin: 0 auto;
+                  "
+                >
+                  <tr>
+                    <td
+                      class="black-box-general bg-text"
+                      style="
+                        color: #fff !important;
+                        font-family: Arial, sans-serif;
+                        font-weight: 700;
+                        font-style: normal;
+                        text-align: center;
+                        font-size: 36px;
+                        line-height: 44px;
+                        width: 100%;
+                      "
+                    >
+                      <b>MERCI DE</b> <br />
+                      <b>NOUS FAIRE</b> <i>CONFIANCE</i> <br />
+                      <i>POUR VOS</i> <br />
+                      <i>CADEAUX !</i>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="2"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+              <td class="mobile-gone">
+                <table
+                  cellspacing="0"
+                  cellpadding="4"
+                  class="large-screens-spacer"
+                ></table>
+              </td>
+              <td style="width: 49.5%">
+                <table width="100%">
+                  <td
+                    class="cart-item-photo"
+                    style="height: 100%; padding: inherit"
+                  >
+                    <table
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      class="mail"
+                    >
+                      <tr>
+                        <td style="width: 100%">
+                          <img
+                            src="images/abstract-bg.png"
+                            width="100%"
+                            style="
+                              width: 100% !important;
+                              display: block;
+                              border: 0;
+                            "
+                          />
+                          <!-- <img
+                            src="https://github.com/YuriMatvieiev/Mails-PCR/blob/main/images/abstract-bg.png?raw=true"
+                                   width="100%"
+                            style="
+                              width: 100% !important;
+                              display: block;
+                              border: 0;
+                            "
+                          /> -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- text+img section -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- black box -->
+          <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto; width: 100% !important; max-width: 700px"
+            class="mail"
+          >
+            <tr>
+              <td
+                width="700"
+                style="background: #31303e; width: 100% !important"
+              >
+                <table
+                  cellspacing="0"
+                  cellpadding="6"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table class="two-cols-mobile" width="100%">
+                  <tr>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="12"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 35%;
+                      "
+                    >
+                      BESOIN D’AIDE?
+                    </td>
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="4"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general"
+                      style="
+                        color: #ffffff;
+                        font-family: Arial, sans-serif;
+                        font-weight: 400;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 16px;
+                        line-height: 18px;
+                      "
+                    >
+                      Nous vous aiderons avec plaisir !
+                      <br />
+                      <strong>N’hésitez pas à nous contacter ></strong>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="6"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end black box -->
+          <!-- spacer -->
+          <table
+            width="700"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto"
+            class="mail"
+          >
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" class="spacer">
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+                <table
+                  cellspacing="0"
+                  cellpadding="18"
+                  class="large-screens-spacer"
+                >
+                  <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end spacer -->
+          <!-- footer -->
+          <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="margin: 0 auto; background: #e7dbca; width: 100% !important"
+            class="mail"
+          >
+            <tr
+              align="center"
+              margin="0 auto"
+              width="100%"
+              style="margin: 0 auto; max-width: 700px; width: 100% !important"
+            >
+              <td
+                align="center"
+                margin="0 auto"
+                width="100%"
+                style="margin: 0 auto; max-width: 700px"
+              >
+                <table
+                  align="center"
+                  class="mail"
+                  margin="0 auto"
+                  width="100%"
+                  style="margin: 0 auto; max-width: 700px"
+                >
+                  <td class="mobile-gone">
+                    <table
+                      cellspacing="0"
+                      cellpadding="6"
+                      class="large-screens-spacer"
+                    >
+                      <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                    </table>
+                  </td>
+                  <tr>
+                    <td
+                      class="black-box-general two-cols"
+                      style="
+                        color: #000;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 75%;
+                      "
+                    >
+                      <table>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: inline-block;
+                                text-decoration: none;
+                              "
+                              href="#"
+                            >
+                              <!-- <img
+                                style="height: 50px; width: 50px"
+                                src="images/instagram-logo.png"
+                                alt="Image"
+                              /> -->
+                              <img
+                                style="height: 50px; width: 50px"
+                                src="https://github.com/YuriMatvieiev/Mails-PCR/blob/main/images/instagram-logo.png?raw=true"
+                                alt="Image"
+                              />
+                            </a>
+                            <a
+                              style="
+                                display: inline-block;
+                                text-decoration: none;
+                              "
+                              href="#"
+                            >
+                              <!-- <img
+                                style="height: 50px; width: 50px"
+                                src="./images/facebook-logo.png"
+                                alt="Image"
+                              /> -->
+                              <img
+                                style="height: 50px; width: 50px"
+                                src="https://github.com/YuriMatvieiev/Mails-PCR/blob/main/images/facebook-logo.png?raw=true"
+                                alt="Image"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="10"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td
+                            class="black-box-general mobile-gone"
+                            style="
+                              color: #000;
+                              font-family: Arial, sans-serif;
+                              font-weight: 400;
+                              font-style: italic;
+                              text-align: left;
+                              font-size: 8px;
+                              line-height: 10px;
+                            "
+                          >
+                            Pour être sûr(e) de recevoir nos offres, nous vous
+                            conseillons d’ajouter notre email info@pointcarre.eu
+                            à votre carnet d’adresses. PointCarré S.A se réserve
+                            le droit de modifier les offres ou leur durée, au
+                            cours de la période promotionnelle. Les erreurs ou
+                            fautes évidentes dans cette newsletter sont sans
+                            engagement pour PointCarré S.A.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td class="mobile-gone">
+                      <table
+                        cellspacing="0"
+                        cellpadding="4"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                    <td
+                      class="black-box-general two-cols"
+                      style="
+                        color: #000;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        text-align: left;
+                        font-size: 30px;
+                        line-height: 40px;
+                        width: 20%;
+                      "
+                    >
+                      <table width="100%">
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              width="100%"
+                              href="#"
+                            >
+                              HORAIRES</a
+                            >
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              width="100%"
+                              href="#"
+                            >
+                              Service clients
+                            </a>
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              width="100%"
+                              href="#"
+                            >
+                              Se désabonner
+                            </a>
+                          </td>
+                        </tr>
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="4"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                        <tr>
+                          <td>
+                            <a
+                              style="
+                                display: block;
+                                text-decoration: none;
+                                color: #000;
+                                text-align: center;
+                                padding: 4px 10px;
+                                border: 1px solid #000;
+                                font-size: 8px;
+                                line-height: 16px;
+                              "
+                              width="100%"
+                              href="#"
+                            >
+                              Vie privée
+                            </a>
+                          </td>
+                        </tr>
+
+                        <td class="mobile-gone">
+                          <table
+                            cellspacing="0"
+                            cellpadding="10"
+                            class="large-screens-spacer"
+                          >
+                            <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                          </table>
+                        </td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table
+                  width="700"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="margin: 0 auto"
+                  class="mail"
+                >
+                  <tr>
+                    <td>
+                      <table cellspacing="0" cellpadding="0" class="spacer">
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                      <table
+                        cellspacing="0"
+                        cellpadding="10"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">
+                      <!-- <img
+                        src="images/logo-white.png"
+                        class="logo footer-logo"
+                        width="100%"
+                      /> -->
+                      <img
+                        src="https://github.com/YuriMatvieiev/Mails-PCR/blob/main/images/logo-white.png?raw=true"
+                        class="logo footer-logo"
+                        width="100%"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table cellspacing="0" cellpadding="0" class="spacer">
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                      <table
+                        cellspacing="0"
+                        cellpadding="5"
+                        class="large-screens-spacer"
+                      >
+                        <td style="font-size: 0; line-height: 0">&nbsp;</td>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- end footer -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
